@@ -10,7 +10,6 @@ CREATE TABLE usuario (
 INSERT INTO usuarios VALUES
 ('admin','atlas'),('usuario','usuario');
 
--- Tabla de atlas
 CREATE DATABASE IF NOT EXISTS dwes;
 USE dwes;
 DROP TABLE IF EXISTS atlas;
