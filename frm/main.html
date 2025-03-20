@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas</title>
+    <link href="./css/estilo.css" rel="stylesheet" />
+</head>
+<body>
+	<main>
+		<!-- header -->
+		<header>
+			<hgroup>
+				<h1><a href="">Atlas</a></h1>
+			</hgroup>
+		</header>
+		<!-- nav -->
+		<!-- Menú horizontal -->
+		<nav>
+			<form action="" method="post">
+				<input type="submit" name="accion[atlas_anadir]" value="Añadir entrada al atlas" /> |
+				<input type="submit" name="accion[atlas_modificar]" value="Modificar entrada en atlas" /> |
+				<input type="submit" name="accion[atlas_mostrar]" value="Mostrar contenido del atlas" /> |
+				<input type="submit" name="accion[atlas_eliminar]" value="Eliminar contenido del atlas" /> |
+				<input type="submit" name="accion[atlas_buscar]" value="Buscar entrada en el atlas" /> |
+			</form>
+		</nav>
+		<!-- aside -->
+		<!-- Menú lateral -->
+		<aside>
+			<form action="" method="post">
+				<ul>
+					<li><input type="submit" name="accion[atlas_anadir]" value="Añadir entrada al atlas" /></li>
+					<li><input type="submit" name="accion[atlas_modificar]" value="Modificar entrada en atlas" /></li>
+					<li><input type="submit" name="accion[atlas_mostrar]" value="Mostrar contenido del atlas" /></li>
+					<li><input type="submit" name="accion[atlas_eliminar]" value="Eliminar contenido del atlas" /></li>
+					<li><input type="submit" name="accion[atlas_buscar]" value="Buscar entrada en el atlas" /></li>
+				</ul>
+			</form>
+		</aside>
+		<!-- section -->
+		<!-- Sección con mensajes del sistma -->
+		<section name="mensajes">
+			<?php
+				/** 
+					MENSAJES DEL SISTEMA : Emplear solo una
+					---------------------------------------
+					$_SESSION['msg_info']
+					$_SESSION['msg_exito']
+					$_SESSION['msg_aviso']
+					$_SESSION['msg_error']
+					$_SESSION['msg_valida']
+				**/
+				include 'mensajes.html';
+			?>
+		</section>
+		<!-- Sección con el contenido de la página -->
+		<section name="contenido">
+			<?php if(isset($contenido)) {include $contenido ;} ?>
+		</section>
+		
+		<!-- footer -->
+		<footer>
+			<?php echo 'Atlas &#169; '.date("Y").' por
+				<a href="https://luisgomezblanco.notion.site/curriculum" target="_blank"> 
+				Luis Lorenzo Gómez Blanco</a> está bajo licencia 
+				<a href="./LICENCIA.TXT" target="_blank">CC BY-NC-SA 4.0</a>';
+			?>
+			<form action="" method="post">
+				<span>Este sitio web hace uso de las cookies propias para ofrecerte un mejor servicio</span>
+				<input type="submit" name="accion[aceptar_cookies]" value="Aceptar" />	
+			</form>
+		</footer>
+	</main>
+</body>
+</html>
