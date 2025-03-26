@@ -1,0 +1,31 @@
+<style>
+	#div_centrar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50vh;
+		flex-direction: column;
+		text-align: center;
+	}
+	input.login {
+		display: block;
+		margin: 10px auto;
+		padding: 8px;
+	}
+	input.boton {
+		margin-top: 10px;
+		margin: 5px;
+		padding: 8px 15px;
+	}
+
+</style>
+<form action="" method="post">
+	<div id="div_centrar">
+		<input class="login" type="text" placeholder="Usuario">
+		<input class="login" type="password" placeholder="Contraseña">
+		<div>
+			<input type="submit" class="boton" name="accion[registro_registrarse]" value="Registrarse" />
+			<input type="submit" class="boton" name="accion[registro_alta_de_usuario]" value="Alta de usuario" />
+		</div>
+	</div>
+</form>
